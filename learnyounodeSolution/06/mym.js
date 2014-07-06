@@ -1,3 +1,8 @@
+/*
+module的格式
+最后要用module.exports = xxx
+实现逻辑实际用了fs，在回调中调用传进来的回调函数
+*/
 var fs = require('fs');
 function filter(dir, ext, callback){
 	fs.readdir(dir,function(err, list){

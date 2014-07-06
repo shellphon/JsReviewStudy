@@ -1,3 +1,10 @@
+/*
+第十三关：做一个简易的api调用接口
+对访问的url传入的查询字符串做时间转换，
+返回json规范的字符串
+
+//遇到问题，返回时不要加 \n 否则过不了验证
+*/
 var http = require('http'),
     url = require('url');
 var server = http.createServer(function(req, res){

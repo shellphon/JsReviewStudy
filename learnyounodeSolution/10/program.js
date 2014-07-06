@@ -1,3 +1,10 @@
+/*
+第十关：开启server
+回调函数参数socket
+socket write 和end方法
+
+监听端口，一旦有socket访问就写入当前时间
+*/
 var net = require('net');
 var server = net.createServer(function(socket){
 	var now = new Date(),

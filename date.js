@@ -24,6 +24,10 @@ console.log(Date.parse("9 23, 1989"));
 console.log(Date.parse("1989-9-23"));
 console.log(Date.parse("1989/9/23"));
 
+//注意
+console.log(Date.parse('1989-7-4'));//这种解析出来是00:00时间
+console.log(Date.parse('1989-07-04'));//这种解析出来是08:00时间
+
 // setMonth  setFullYear setHours 的可选参数用法
 now.setMonth(6);//将当前时间的月份设置为7月
 console.log(now);

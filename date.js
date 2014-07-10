@@ -25,8 +25,8 @@ console.log(Date.parse("1989-9-23"));
 console.log(Date.parse("1989/9/23"));
 
 //注意
-console.log(Date.parse('1989-7-4'));//这种解析出来是00:00时间
-console.log(Date.parse('1989-07-04'));//这种解析出来是08:00时间
+console.log(Date.parse('1989-7-4'));//这种解析出来是00:00时间 (firefox ie 不支持，返回NaN)
+console.log(Date.parse('1989-07-04'));//这种解析出来是08:00时间（ie不支持 NaN）
 
 // setMonth  setFullYear setHours 的可选参数用法
 now.setMonth(6);//将当前时间的月份设置为7月

@@ -21,10 +21,14 @@ console.log("getTimezoneOffset():"+now.getTimezoneOffset());//minutes diff from 
 //解析从1970年1月1日午夜距离该日期时间的毫秒数
 console.log(Date.parse("Sep 23, 1989"));//sep可以是1-12，还可以是这种格式 2005/8/1 2005-8-1
 console.log(Date.parse("9 23, 1989"));
-console.log(Date.parse("1989-9-23"));
+console.log(Date.parse("1989-9-23"));//ie解析NaN
 console.log(Date.parse("1989/9/23"));
+console.log(Date.parse('9-23-1989'));
+console.log(Date.parse('9/23/1989'));
+console.log(Date.parse('09-23-1989'));
+console.log(Date.parse('09/23/1989'));
 
-//注意
+//注意  不大通用的解析，即 new Date()的时候也不好用哦
 console.log(Date.parse('1989-7-4'));//这种解析出来是00:00时间 (firefox ie 不支持，返回NaN)
 console.log(Date.parse('1989-07-04'));//这种解析出来是08:00时间（ie不支持 NaN）
 

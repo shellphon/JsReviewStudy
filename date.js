@@ -1,5 +1,6 @@
 /**
   about date type
+  log-2015-01-09: 目前只有chrome支持parse 2014/10/10 12:12:12.0  即秒出现小数点的情形，ie和火狐暂时会NaN
 */
 
 var now = new Date(); //new a date type object default for now
